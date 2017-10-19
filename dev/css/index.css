@@ -1,0 +1,89 @@
+* {
+  text-decoration: none; }
+
+body {
+  height: 2000px; }
+
+.Index-top {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/top-img.jpg");
+  background-attachment: fixed;
+  background-position: center; }
+  .Index-top__filter {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(29, 76, 91, 0.45);
+    -webkit-box-shadow: 0px -20px 50px 0px rgba(0, 0, 0, 0.66) inset;
+            box-shadow: 0px -20px 50px 0px rgba(0, 0, 0, 0.66) inset; }
+  .Index-top__navigation {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    padding-top: 9px;
+    position: fixed;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
+    -webkit-transition: .4s;
+    transition: .4s;
+    z-index: 1; }
+  .Index-top__navigation-lists {
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .Index-top__navigation-list {
+    position: relative; }
+    .Index-top__navigation-list::after {
+      content: "";
+      width: 0%;
+      height: 1.5px;
+      background-color: #f4f4f4;
+      position: absolute;
+      left: -0;
+      top: 17px;
+      -webkit-transition: .3s;
+      transition: .3s; }
+    .Index-top__navigation-list:hover::after {
+      width: 100%; }
+  .Index-top__navigation-list a {
+    color: #f4f4f4; }
+  .Index-top__content {
+    height: 100%;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: #f4f4f4;
+    text-align: center;
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 45px; }
+  .Index-top__logo {
+    width: 450px;
+    margin-bottom: 30px; }
+
+.About {
+  position: relative;
+  width: 100%;
+  height: 1500px;
+  background-color: #b5cad7; }

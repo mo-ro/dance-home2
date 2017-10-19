@@ -1,0 +1,12 @@
+$black-text: #183446;
+
+.Content-title {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 20px;
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  width: 90%;
+  border-bottom: 2px solid $black-text;
+}
