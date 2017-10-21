@@ -3,42 +3,71 @@ $black-text: #183446;
 
 * {
   text-decoration: none;
+  list-style: none;
 }
 
 body {
-  height: 2000px;
+  height: 5000px;
 }
 
 .Index-top {
+  position: relative;
   width: 100%;
   height: 100vh;
   background-image: url("../img/top-img.jpg");
   background-attachment: fixed;
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  // &::after {
+  //   content: "";
+  //   width: 100%;
+  //   height: 10%;
+  //   background-color: $black-text;
+  //   position: absolute;
+  //   transition: .7s;
+  // }
+  // 
+  // &__add::after {
+  //   bottom: 0;
+  //   left: 0
+  // }
+  // &::before {
+  //   content: "";
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: rgba(244, 116, 2, 1);
+  //   position: absolute;
+  //   top: 0;
+  //   left: -95%;
+  //   box-shadow: 0px 0px 10px black;
+  // }
   
   &__filter {
     width: 100%;
     height: 100%;
-    background-color: rgba(29, 76, 91, 0.45);
-    box-shadow: 0px -20px 50px 0px rgba(0, 0, 0, 0.66) inset;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px -40px 80px -30px rgba(0, 0, 0, 0.6) inset;
   }
   
   &__navigation {
     width: 100%;
     height: 40px;
-    font-size: 16px;
+    font-size: 17px;
+    font-weight: 600;
     padding-top: 9px;
     position: fixed;
     left: 50%;
     transform: translate(-50%, 0%);
     transition: .4s;
-    z-index: 1;
+    z-index: 10;
+    letter-spacing: .5px;
   }
   
   &__navigation-lists {
     width: 80%;
     margin: 0 auto;
-    
     height: 100%;
     display: -webkit-flex;
     display: -ms-flex;
@@ -51,8 +80,8 @@ body {
     &::after {
       content: "";
       width: 0%;
-      height: 1.5px;
-      background-color: $white-text;
+      height: 2px;
+      background-color: $black-text;
       position: absolute;
       left: -0;
       top: 17px;
@@ -71,7 +100,7 @@ body {
   }
   
   &__navigation-list a {
-    color: $white-text;
+    color: $black-text;
   }
   
   &__content {
@@ -82,16 +111,59 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: $white-text;
+    color: $black-text;
     text-align: center;
-    font-size: 34px;
+    font-size: 2.5em;
     font-weight: 800;
-    line-height: 45px;
+    line-height: 56px;
   }
   
   &__logo {
-    width: 450px;
+    width: 40vh;
     margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, .8);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.49);
+    border-radius: 50%;
+  }
+  
+  &__bottom {
+    height: 80px;
+    width: 100%;
+    background-color: $black-text;
+    position: absolute;
+    bottom: 0;
+    transition: .7s;
+    
+    & ul {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: flex-end;
+      margin: 0 auto;
+      align-items: center;
+      height: 100%;
+      width: 95%;
+    }
+  }
+  
+  &__button {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff;
+    background-size: 70%;
+    background-color: #282828;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10%;
+    
+    &--twitter {
+      background-image: url("../img/twitter.png");
+      margin-right: 30px;
+    }
+    &--youtube {
+      background-image: url("../img/youtube.png");
+    }
   }
   
 }
@@ -99,6 +171,281 @@ body {
 .About {
   position: relative;
   width: 100%;
-  height: 1500px;
-  background-color: rgb(181, 202, 215);
+  height: 900px;
+  background-color: #f6d2b2;
+  
+  &__title {
+    color: #F37402;
+  }
+  
+  &__content {
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  &__text {
+    color: $black-text;
+    flex-grow: 2;
+    width: 400px;
+    max-width: 600px;
+    margin: 0 50px;
+    min-width: 400px;
+    line-height: 28px;
+  }
+  
+  &__sub-title {
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  &__images {
+    flex-grow: 3;
+    width: 500px;
+    min-width: 630px;
+    max-width: 800px;
+    height: 700px;
+    margin: 0 50px 0 0;
+    // background-color: rgb(200, 165, 152);
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  &__image {
+    width: 300px;
+    background-color: #7d7d7d;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 3px solid #F37402;
+    border-radius: 2px;
+    overflow: hidden;
+    line-height: 35px;
+    white-space: pre;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+
+    
+    &--a {
+      position: relative;
+      height: 420px;
+      flex-grow: 1;
+      background-image: url("../img/about5.jpg");
+      background-position: center;
+      
+      &::after {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        content: "break界の総長\Aげんき";
+        position: absolute;
+        background-color: rgba(8, 8, 8, 0.58);
+        width: 100%;
+        height: 100%;
+        left: -100%;
+        transition: .3s;
+        // filter: blur(20px)
+      }
+      
+      &:hover {
+        &::after {
+          left: 0%;
+        }
+      }
+    }
+    &--bc {
+      height: 410px;
+    }
+    &--b {
+      position: relative;
+      height: 60%;
+      background-image: url("../img/about3.jpg");
+      background-position: center;
+      
+      &::after {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        content: "2016年春\Aバーベキュー";
+        position: absolute;
+        background-color: rgba(8, 8, 8, 0.58);
+        width: 100%;
+        height: 100%;
+        right: -100%;
+        transition: .3s;
+        // filter: blur(20px)
+      }
+      
+      &:hover {
+        &::after {
+          right: 0%;
+        }
+      }
+    }
+    &--c {
+      position: relative;
+      height:  40%;
+      background-image: url("../img/about6.jpg");
+      background-position: center;
+      
+      &::after {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        content: "2017年\A夏合宿";
+        position: absolute;
+        background-color: rgba(8, 8, 8, 0.58);
+        width: 100%;
+        height: 100%;
+        right: -100%;
+        transition: .3s;
+        // filter: blur(20px)
+      }
+      
+      &:hover {
+        &::after {
+          right: 0%;
+        }
+      }
+      
+    }
+    &--d {
+      position: relative;
+      height: 280px;
+      flex-grow: 2;
+      background-image: url("../img/about2.jpg");
+      background-position: center;
+      
+      &::after {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        content: "2017年夏\AUEC-niget";
+        position: absolute;
+        background-color: rgba(8, 8, 8, 0.58);
+        width: 100%;
+        height: 100%;
+        bottom: -100%;
+        transition: .3s;
+        // filter: blur(20px)
+      }
+      
+      &:hover {
+        &::after {
+          bottom: 0%;
+        }
+      }
+    }
+  }
+}
+
+.SNS-block {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background-image: url("../img/wall.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  &__title {
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    transform: translate(-50%, 0);
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    z-index: 1
+  }
+  
+  
+  &__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 180px;
+    box-sizing: border-box;
+  }
+  
+  
+  &__filter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 39, 91, 0.75);
+  }
+  
+  &__button {
+    width: 170px;
+    height: 170px;
+    z-index: 1;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #292929;
+    transition: .5s;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    
+    
+    
+    & span {
+      color: #fff;
+      font-size: 25px;
+      font-weight: 600;
+      position: absolute;
+      bottom: 30px;
+      transition: .5s;
+    }
+    
+    &--twitter {
+      background-image: url("../img/twitter.png");
+      background-position: center;
+      &:hover {
+        border-color: #55acee;
+        & span {
+          color: #55acee;
+        }
+      }
+    }
+    &--youtube {
+      background-image: url("../img/youtube.png");
+      background-position: center;
+      &:hover {
+        border-color: #FF0000;
+        & span {
+          color: #FF0000;
+        }
+      }
+    }    
+  }
 }

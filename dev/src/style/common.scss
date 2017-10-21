@@ -1,12 +1,42 @@
 $black-text: #183446;
+$link-color: #6aacac;
+$link-color-hover: #548787;
 
 .Content-title {
   font-size: 30px;
   font-weight: 600;
-  line-height: 20px;
-  position: absolute;
-  top: 40px;
-  left: 30px;
+  line-height: 10px;
+  padding-top: 45px;
+  margin-left: 30px;
   width: 90%;
-  border-bottom: 2px solid $black-text;
+  border-bottom: 2px solid #F37402;
+  
+  
+  &__link {
+    font-size: 14px;
+    position: absolute;
+    top: 49px;
+    right: 11%;
+    box-sizing: content-box;
+    color: $link-color;
+    
+    &:hover {
+      color: $link-color-hover;
+      &::before {
+        border-color: $link-color-hover;
+      }
+    }
+    
+    &::before {
+      position: absolute;
+      content: "";
+      border-top: 2px solid $link-color;
+      border-right: 2px solid $link-color;
+      width: 6px;
+      height: 6px;
+      transform: rotate(45deg);
+      left: -15px;
+      top: 1px;
+    }
+  }
 }

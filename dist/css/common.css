@@ -1,9 +1,31 @@
 .Content-title {
   font-size: 30px;
   font-weight: 600;
-  line-height: 20px;
-  position: absolute;
-  top: 40px;
-  left: 30px;
+  line-height: 10px;
+  padding-top: 45px;
+  margin-left: 30px;
   width: 90%;
-  border-bottom: 2px solid #183446; }
+  border-bottom: 2px solid #F37402; }
+  .Content-title__link {
+    font-size: 14px;
+    position: absolute;
+    top: 49px;
+    right: 11%;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    color: #6aacac; }
+    .Content-title__link:hover {
+      color: #548787; }
+      .Content-title__link:hover::before {
+        border-color: #548787; }
+    .Content-title__link::before {
+      position: absolute;
+      content: "";
+      border-top: 2px solid #6aacac;
+      border-right: 2px solid #6aacac;
+      width: 6px;
+      height: 6px;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+      left: -15px;
+      top: 1px; }
