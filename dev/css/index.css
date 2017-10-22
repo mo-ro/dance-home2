@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
+@import url("https://fonts.googleapis.com/css?family=Acme");
 * {
   text-decoration: none;
   list-style: none; }
@@ -23,7 +25,7 @@ body {
             box-shadow: 0px -40px 80px -30px rgba(0, 0, 0, 0.6) inset; }
   .Index-top__navigation {
     width: 100%;
-    height: 40px;
+    height: 50px;
     font-size: 17px;
     font-weight: 600;
     padding-top: 9px;
@@ -93,11 +95,12 @@ body {
             box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.49);
     border-radius: 50%; }
   .Index-top__bottom {
-    height: 80px;
+    height: 50px;
     width: 100%;
     background-color: #183446;
     position: absolute;
     bottom: 0;
+    left: 0;
     -webkit-transition: .7s;
     transition: .7s; }
     .Index-top__bottom ul {
@@ -116,8 +119,8 @@ body {
       width: 95%; }
   .Index-top__button {
     cursor: pointer;
-    width: 50px;
-    height: 50px;
+    width: 42px;
+    height: 42px;
     border: 2px solid #fff;
     background-size: 70%;
     background-color: #282828;
@@ -134,9 +137,10 @@ body {
   position: relative;
   width: 100%;
   height: 900px;
-  background-color: #f6d2b2; }
+  background-color: #f7ebe2; }
   .About__title {
-    color: #F37402; }
+    color: #F37402;
+    border-bottom: 2px solid #F37402; }
   .About__content {
     width: 100%;
     display: -ms-flex;
@@ -196,6 +200,23 @@ body {
     text-align: center;
     color: #fff;
     font-size: 18px; }
+    .About__image::after {
+      display: -ms-flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      position: absolute;
+      background-color: rgba(8, 8, 8, 0.58);
+      width: 100%;
+      height: 100%;
+      -webkit-transition: .3s;
+      transition: .3s; }
     .About__image--a {
       position: relative;
       height: 420px;
@@ -205,24 +226,8 @@ body {
       background-image: url("../img/about5.jpg");
       background-position: center; }
       .About__image--a::after {
-        display: -ms-flex;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
         content: "break界の総長\Aげんき";
-        position: absolute;
-        background-color: rgba(8, 8, 8, 0.58);
-        width: 100%;
-        height: 100%;
-        left: -100%;
-        -webkit-transition: .3s;
-        transition: .3s; }
+        left: -100%; }
       .About__image--a:hover::after {
         left: 0%; }
     .About__image--bc {
@@ -233,24 +238,8 @@ body {
       background-image: url("../img/about3.jpg");
       background-position: center; }
       .About__image--b::after {
-        display: -ms-flex;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
         content: "2016年春\Aバーベキュー";
-        position: absolute;
-        background-color: rgba(8, 8, 8, 0.58);
-        width: 100%;
-        height: 100%;
-        right: -100%;
-        -webkit-transition: .3s;
-        transition: .3s; }
+        right: -100%; }
       .About__image--b:hover::after {
         right: 0%; }
     .About__image--c {
@@ -259,24 +248,8 @@ body {
       background-image: url("../img/about6.jpg");
       background-position: center; }
       .About__image--c::after {
-        display: -ms-flex;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
         content: "2017年\A夏合宿";
-        position: absolute;
-        background-color: rgba(8, 8, 8, 0.58);
-        width: 100%;
-        height: 100%;
-        right: -100%;
-        -webkit-transition: .3s;
-        transition: .3s; }
+        right: -100%; }
       .About__image--c:hover::after {
         right: 0%; }
     .About__image--d {
@@ -288,24 +261,8 @@ body {
       background-image: url("../img/about2.jpg");
       background-position: center; }
       .About__image--d::after {
-        display: -ms-flex;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
         content: "2017年夏\AUEC-niget";
-        position: absolute;
-        background-color: rgba(8, 8, 8, 0.58);
-        width: 100%;
-        height: 100%;
-        bottom: -100%;
-        -webkit-transition: .3s;
-        transition: .3s; }
+        bottom: -100%; }
       .About__image--d:hover::after {
         bottom: 0%; }
 
@@ -389,3 +346,198 @@ body {
         border-color: #FF0000; }
         .SNS-block__button--youtube:hover span {
           color: #FF0000; }
+
+.News {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  background-color: #e7eaed; }
+  .News__title {
+    color: #1A7DD7;
+    border-bottom: 2px solid #1A7DD7; }
+  .News__contents {
+    width: 85%;
+    height: 80%;
+    margin: 0px auto;
+    margin-top: 60px; }
+  .News__content {
+    height: 50px;
+    border-bottom: 2px dotted #88b3da;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 5px; }
+    .News__content:first-child {
+      border-top: 2px dotted #88b3da; }
+  .News__date {
+    font-weight: 400;
+    font-size: 15px;
+    margin-right: 100px; }
+
+.Genre {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  background-color: #f5f0e1; }
+  .Genre__title {
+    color: #F2B809;
+    border-bottom: 2px solid #F2B809; }
+  .Genre__content {
+    height: 90%;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .Genre__images {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    max-width: 600px;
+    height: 600px;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .Genre__image {
+    background-color: #7d7d7d;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 3px solid #F2B809;
+    border-radius: 2px;
+    overflow: hidden;
+    line-height: 35px;
+    white-space: pre;
+    text-align: center;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #fff;
+    font-size: 18px;
+    position: relative; }
+    .Genre__image:hover {
+      -webkit-filter: grayscale(0);
+              filter: grayscale(0);
+      -webkit-transform: scale(1.02);
+              transform: scale(1.02); }
+    .Genre__image a {
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.2);
+      width: 100%;
+      height: 100%;
+      vertical-align: middle;
+      position: absolute;
+      display: -ms-flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+    .Genre__image span {
+      position: relative;
+      font-size: 40px;
+      font-weight: 1000;
+      z-index: 1;
+      display: block;
+      margin: 0 auto;
+      font-family: 'Acme', sans-serif;
+      letter-spacing: 1px;
+      pointer-events: none; }
+      .Genre__image span::after {
+        content: attr(txt);
+        position: absolute;
+        clip: rect(0, 0, 120px, 0);
+        -webkit-transition: clip .3s linear;
+        transition: clip .3s linear;
+        left: 0;
+        z-index: 3; }
+    .Genre__image:hover span::after {
+      clip: rect(0, 155px, 120px, 0); }
+    .Genre__image--a {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      height: 70%;
+      -webkit-box-flex: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1;
+      background-position: center; }
+      .Genre__image--a span:after {
+        color: #f12424; }
+    .Genre__image--bc {
+      width: 60%;
+      height: 70%;
+      margin: 0 10px 10px 0;
+      padding-bottom: 10px;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box; }
+    .Genre__image--b {
+      width: 100%;
+      position: relative;
+      height: 50%;
+      background-image: url("../img/about3.jpg");
+      background-position: center; }
+      .Genre__image--b span:after {
+        color: #E7D721; }
+    .Genre__image--c {
+      width: 100%;
+      height: 50%;
+      background-image: url("../img/about6.jpg");
+      background-position: center; }
+      .Genre__image--c span:after {
+        color: #E5871D; }
+    .Genre__image--d {
+      width: 100%;
+      height: 30%;
+      -webkit-box-flex: 2;
+          -ms-flex-positive: 2;
+              flex-grow: 2;
+      background-image: url("../img/about2.jpg");
+      background-position: center; }
+      .Genre__image--d span:after {
+        color: #237C1E; }
+    .Genre__image--e {
+      width: 100%;
+      height: 40%; }
+      .Genre__image--e span:after {
+        color: #941F94; }
+    .Genre__image--f {
+      -webkit-box-flex: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1;
+      height: 60%;
+      background-image: url("../img/about5.jpg"); }
+      .Genre__image--f span:after {
+        color: #81481C; }
+    .Genre__image--g {
+      width: 50%;
+      height: 60%; }
+      .Genre__image--g span:after {
+        color: #878787; }
+      .Genre__image--g:hover span::after {
+        clip: rect(0, 195px, 120px, 0); }
