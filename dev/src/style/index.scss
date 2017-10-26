@@ -10,7 +10,18 @@ $black-text: #183446;
 }
 
 body {
-  height: 5000px;
+  background-image: url("../img/gback.jpg");
+  // overflow: hidden;
+  background-attachment: fixed;
+}
+
+.Grobal-Wrapper {
+  // height: 5000px;
+  width: 85%;
+  margin: 0 auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.65);
+  overflow: hidden;
+  min-width: 1200px;
 }
 
 .Index-top {
@@ -55,8 +66,8 @@ body {
   }
   
   &__navigation {
-    width: 100%;
-    height: 50px;
+    width: 110%;
+    height:45px;
     font-size: 17px;
     font-weight: 600;
     padding-top: 9px;
@@ -84,11 +95,11 @@ body {
       content: "";
       width: 0%;
       height: 2px;
-      background-color: $black-text;
+      background-color: $white-text;
       position: absolute;
       left: -0;
       top: 17px;
-      transition: .3s;
+      transition: .4s;
       
     }
     &:hover {
@@ -119,6 +130,8 @@ body {
     font-size: 2.5em;
     font-weight: 800;
     line-height: 56px;
+    opacity: 0;
+    transition: 1s;
   }
   
   &__logo {
@@ -127,6 +140,7 @@ body {
     background-color: rgba(255, 255, 255, .8);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.49);
     border-radius: 50%;
+
   }
   
   &__bottom {
@@ -175,8 +189,8 @@ body {
 .About {
   position: relative;
   width: 100%;
-  height: 900px;
-  background-color: #f7ebe2;
+  height: 800px;
+  background-color: #f5dfcf;
   
   &__title {
     color: #F37402;
@@ -201,6 +215,11 @@ body {
     margin: 0 50px;
     min-width: 400px;
     line-height: 28px;
+    // display: -webkit-flex;
+    // display: -ms-flex;
+    // display: flex;
+    // justify-content: center;
+    // flex-direction: column;
   }
   
   &__sub-title {
@@ -211,21 +230,20 @@ body {
   }
   
   &__images {
-    flex-grow: 3;
-    width: 500px;
-    min-width: 630px;
-    max-width: 800px;
-    height: 700px;
-    margin: 0 50px 0 0;
-    // background-color: rgb(200, 165, 152);
+    flex-grow: 1;
+    max-width: 600px;
+    height: 600px;
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 1s;
   }
   
   &__image {
-    width: 300px;
     background-color: #7d7d7d;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -240,6 +258,7 @@ body {
     text-align: center;
     color: #fff;
     font-size: 18px;
+    
     
     &::after {
       display: -webkit-flex;
@@ -257,7 +276,7 @@ body {
     
     &--a {
       position: relative;
-      height: 420px;
+      height: 70%;
       flex-grow: 1;
       background-image: url("../img/about5.jpg");
       background-position: center;
@@ -275,11 +294,16 @@ body {
       }
     }
     &--bc {
-      height: 410px;
+      width: 60%;
+      height: 70%;
+      margin: 0 10px 10px 0;
+      padding-bottom: 10px;
+      box-sizing: border-box;
     }
     &--b {
       position: relative;
-      height: 60%;
+      width: 100%;
+      height: 50%;
       background-image: url("../img/about3.jpg");
       background-position: center;
       
@@ -296,7 +320,8 @@ body {
     }
     &--c {
       position: relative;
-      height:  40%;
+      width: 100%;
+      height:  50%;
       background-image: url("../img/about6.jpg");
       background-position: center;
       
@@ -315,7 +340,8 @@ body {
     }
     &--d {
       position: relative;
-      height: 280px;
+      width: 100%;
+      height: 30%;
       flex-grow: 2;
       background-image: url("../img/about2.jpg");
       background-position: center;
@@ -337,7 +363,7 @@ body {
 .SNS-block {
   position: relative;
   width: 100%;
-  height: 350px;
+  height: 300px;
   background-image: url("../img/wall.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -429,7 +455,7 @@ body {
 .News {
   position: relative;
   width: 100%;
-  height: 800px;
+  height: 600px;
   background-color: #e7eaed;
   
   &__title {
@@ -442,9 +468,14 @@ body {
     height: 80%;
     margin: 0px auto;
     margin-top: 60px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-around;
   }
   &__content {
     height: 50px;
+    width: 100%;
     border-bottom: 2px dotted #88b3da;
     display: -webkit-flex;
     display: -ms-flex;
@@ -510,6 +541,7 @@ body {
     box-sizing: border-box;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     border: 3px solid #F2B809;
     border-radius: 2px;
     overflow: hidden;
@@ -523,6 +555,7 @@ body {
     color: #fff;
     font-size: 18px;
     position: relative;
+    filter: grayscale(1);
     
     &:hover {
       filter: grayscale(0);
@@ -578,13 +611,10 @@ body {
     
     
     &--a {
-      // width: 20%;
-      // min-width: 0px;
-      // max-width: 230px;
       box-sizing: border-box;
       height: 70%;
       flex-grow: 1;
-      
+      background-image: url("../img/hiphop.jpg");
       background-position: center;
       
       & span:after {
@@ -605,7 +635,7 @@ body {
       position: relative;
       // margin-bottom: 0;
       height: 50%;
-      background-image: url("../img/about3.jpg");
+      background-image: url("../img/lock.jpg");
       background-position: center;
       & span:after {
         color: #E7D721;
@@ -614,7 +644,7 @@ body {
     &--c {
       width: 100%;
       height:  50%;
-      background-image: url("../img/about6.jpg");
+      background-image: url("../img/pop.jpg");
       background-position: center;
       & span:after {
         color: #E5871D;
@@ -625,8 +655,8 @@ body {
       width: 100%;
       height: 30%;
       flex-grow: 2;
-      background-image: url("../img/about2.jpg");
-      background-position: center;
+      background-image: url("../img/house.jpg");
+      // background-position: center -200px;
       & span:after {
         color: #237C1E;
       }
@@ -635,6 +665,8 @@ body {
       width: 100%;
       // flex-grow: 1;
       height: 40%;
+      background-image: url("../img/girls.jpg");
+      margin-right: 0px;
       & span:after {
         color: #941F94;
       }
@@ -651,15 +683,23 @@ body {
     &--g{
       width: 50%;
       height: 60%;
+      background-image: url("../img/freestyle.jpg");
+      background-position: center;
+      margin-right: 0px;
       & span:after {
         color: #878787;
       }
       &:hover {
         & span::after {
-          clip: rect(0, 195px, 120px, 0);
+          clip: rect(0, 200px, 120px, 0);
         }
       }
     }
   }
-  
+}
+
+.Grobal-footer {
+  height: 300px;
+  width: 100%;
+  background-color: rgb(213, 213, 213);
 }

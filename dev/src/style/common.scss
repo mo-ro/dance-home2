@@ -40,3 +40,37 @@ $link-color-hover: #548787;
     }
   }
 }
+
+.link-button {
+  position: relative;
+  width: 170px;
+  height: 50px;
+  border: 2px solid #F37402;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: .3s;
+  
+  &::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid #F37402;
+    border-right: 2px solid #F37402;
+    display: block;
+    position: absolute;
+    top: 21px;
+    right: 15px;
+    transform: rotate(45deg);
+    
+  }
+  &:hover {
+    background-color: #f4c79e;
+  }
+}
